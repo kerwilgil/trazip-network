@@ -47,11 +47,11 @@ La señalización SIP sobre TCP está soportada. El análisis pasivo de SIP sobr
 
 | Plataforma | Estado y requisitos |
 | --- | --- |
-| Windows | Se han generado compilaciones de desarrollo. Está prevista la distribución como ejecutable independiente, instalador y ZIP portable. Requiere WebView2. Npcap se instala por separado para captura en vivo. El análisis de archivos PCAP no lo necesita. |
+| Windows | Se han generado compilaciones de desarrollo. Está prevista la distribución como instalador y ZIP portable. Requiere WebView2. Npcap se instala por separado para captura en vivo. El análisis de archivos PCAP no lo necesita. |
 | macOS | Compilación automatizada verificada. El runtime usa WebKit y la captura en vivo requiere permisos BPF. La distribución para usuarios sigue pendiente. |
 | Linux | Compilación automatizada verificada. El runtime requiere GTK y WebKitGTK y las operaciones de red dependen de los permisos del sistema. La distribución para usuarios sigue pendiente. |
 
-Cuando se publiquen los paquetes de Windows, el ejecutable independiente se identificará como `TRAZIP-1.0.0.exe`, el instalador como `TRAZIP-1.0.0-Setup.exe` y el ZIP como `TRAZIP-1.0.0-portable.zip`. El ejecutable instalado o extraído del ZIP se llama `TRAZIP.exe`.
+Cuando se publiquen los paquetes de Windows, se distribuirán únicamente el instalador `TRAZIP-1.0.0-Setup.exe` y el ZIP portable `TRAZIP-1.0.0-portable.zip`. Ambos incluyen `TRAZIP.exe` para ejecutar la aplicación. No se publicará un ejecutable independiente como tercer artefacto.
 
 ## Privacidad y conexiones externas
 
