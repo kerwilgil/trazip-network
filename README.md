@@ -12,7 +12,7 @@
 
 TRAZIP reúne diagnósticos de conectividad, análisis de tráfico e inteligencia de red en una sola sesión. Procesa las capturas localmente y distingue las observaciones de los datos que aportan proveedores externos.
 
-**Estado de distribución.** La versión 1.0.0 está en preparación. Este repositorio es el canal previsto para instaladores, binarios y manifiestos de actualización. Los enlaces de descarga se incorporarán cuando haya una versión disponible en este canal.
+**Estado de distribución.** TRAZIP **v1.0.0 está publicado como release estable para Windows x64**. Descarga la [release oficial](https://github.com/kerwilgil/trazip-network/releases/tag/v1.0.0), el [instalador Setup](https://github.com/kerwilgil/trazip-network/releases/download/v1.0.0/TRAZIP-1.0.0-Setup.exe) o el [ZIP portable](https://github.com/kerwilgil/trazip-network/releases/download/v1.0.0/TRAZIP-1.0.0-portable.zip). Los archivos `.sha256` y el manifiesto de actualización firmado están adjuntos en la release.
 
 ## TRAZIP en pantalla
 
@@ -47,11 +47,11 @@ La señalización SIP sobre TCP está soportada. El análisis pasivo de SIP sobr
 
 | Plataforma | Estado y requisitos |
 | --- | --- |
-| Windows | Se han generado compilaciones de desarrollo. Está prevista la distribución como instalador y ZIP portable. Requiere WebView2. Npcap se instala por separado para captura en vivo. El análisis de archivos PCAP no lo necesita. |
+| Windows | **v1.0.0 estable (x64)** disponible como instalador y ZIP portable. Requiere WebView2. Npcap se instala por separado para captura en vivo. El análisis de archivos PCAP no lo necesita. |
 | macOS | Compilación automatizada verificada. El runtime usa WebKit y la captura en vivo requiere permisos BPF. La distribución para usuarios sigue pendiente. |
 | Linux | Compilación automatizada verificada. El runtime requiere GTK y WebKitGTK y las operaciones de red dependen de los permisos del sistema. La distribución para usuarios sigue pendiente. |
 
-Cuando se publiquen los paquetes de Windows, se distribuirán únicamente el instalador `TRAZIP-1.0.0-Setup.exe` y el ZIP portable `TRAZIP-1.0.0-portable.zip`. Ambos incluyen `TRAZIP.exe` para ejecutar la aplicación. No se publicará un ejecutable independiente como tercer artefacto.
+Los dos paquetes oficiales para Windows son [`TRAZIP-1.0.0-Setup.exe`](https://github.com/kerwilgil/trazip-network/releases/download/v1.0.0/TRAZIP-1.0.0-Setup.exe) y [`TRAZIP-1.0.0-portable.zip`](https://github.com/kerwilgil/trazip-network/releases/download/v1.0.0/TRAZIP-1.0.0-portable.zip). Ambos incluyen `TRAZIP.exe`. No se publica un ejecutable independiente como tercer paquete.
 
 ## Privacidad y conexiones externas
 
@@ -66,6 +66,6 @@ El actualizador de Windows verifica la firma Ed25519 del manifiesto y los hashes
 
 El motor Go procesa capturas, protocolos y consultas. La versi?n de compilaci?n del proyecto es Go 1.26.11. Wails comunica ese motor con la interfaz React y TypeScript en español e inglés. Los informes conservan la procedencia y las limitaciones de los resultados.
 
-La rama principal de desarrollo incorpora la inteligencia de dominios y sus exportaciones, avisos cuando falla una exportación y protección frente a la interpretación de valores como fórmulas en las exportaciones CSV de conexiones y endpoints. El instalador limita la desinstalación a los archivos que coloca e incluye los avisos y textos de licencias de terceros. El instalador tiene pruebas automatizadas de sus reglas y queda pendiente su validación nativa.
+La rama principal de desarrollo incorpora la inteligencia de dominios y sus exportaciones, avisos cuando falla una exportación y protección frente a la interpretación de valores como fórmulas en las exportaciones CSV de conexiones y endpoints. El instalador limita la desinstalación a los archivos que coloca e incluye los avisos y textos de licencias de terceros. El instalador tiene pruebas automatizadas de sus reglas y se validó el ciclo nativo de instalación, desinstalación y reinstalación en un runner Windows aislado; la verificación del proceso gráfico fue realizada por el usuario.
 
 El canal de distribución reúne la documentación y los archivos aprobados para usuarios. El código fuente se gestiona por separado.
