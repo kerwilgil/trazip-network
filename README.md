@@ -14,6 +14,8 @@ TRAZIP reúne diagnósticos de conectividad, análisis de tráfico e inteligenci
 
 **Estado de distribución.** TRAZIP **v1.0.0 está publicado como release estable para Windows x64**. Descarga la [release oficial](https://github.com/kerwilgil/trazip-network/releases/tag/v1.0.0), el [instalador Setup](https://github.com/kerwilgil/trazip-network/releases/download/v1.0.0/TRAZIP-1.0.0-Setup.exe) o el [ZIP portable](https://github.com/kerwilgil/trazip-network/releases/download/v1.0.0/TRAZIP-1.0.0-portable.zip). Los archivos `.sha256` y el manifiesto de actualización firmado están adjuntos en la release.
 
+**macOS (Apple Silicon, ARM64).** La release v1.0.0 incluye además una distribución inicial para macOS: [`TRAZIP-macos-1.0.0-arm64.zip`](https://github.com/kerwilgil/trazip-network/releases/download/v1.0.0/TRAZIP-macos-1.0.0-arm64.zip) y su [`.sha256`](https://github.com/kerwilgil/trazip-network/releases/download/v1.0.0/TRAZIP-macos-1.0.0-arm64.zip.sha256). Es una compilación **ad-hoc, sin Developer ID ni notarización de Apple**; Gatekeeper exige autorización manual en la primera apertura (instrucciones en el `LEEME.txt` del ZIP).
+
 ## TRAZIP en pantalla
 
 <table>
@@ -48,7 +50,7 @@ La señalización SIP sobre TCP está soportada. El análisis pasivo de SIP sobr
 | Plataforma | Estado y requisitos |
 | --- | --- |
 | Windows | **v1.0.0 estable (x64)** disponible como instalador y ZIP portable. Requiere WebView2. Npcap se instala por separado para captura en vivo. El análisis de archivos PCAP no lo necesita. |
-| macOS | Compilación automatizada verificada. El runtime usa WebKit y la captura en vivo requiere permisos BPF. La distribución para usuarios sigue pendiente. |
+| macOS | **v1.0.0 distribución inicial (solo Apple Silicon ARM64, sin notarizar)**. Probado en macOS 27.2.1. Compilación ad-hoc sin Developer ID: Gatekeeper requiere autorización manual. Verificado: arranque y cierre, interfaz, lectura y análisis de PCAP, VoIP con datos de laboratorio y Ping. **No verificados:** captura en vivo BPF (requiere permisos BPF), MTR, traceroute, WiFi y exportaciones. La interfaz muestra textos de Npcap que no aplican en macOS (limitación conocida). Las actualizaciones se instalan manualmente. No hay build para Intel. |
 | Linux | Compilación automatizada verificada. El runtime requiere GTK y WebKitGTK y las operaciones de red dependen de los permisos del sistema. La distribución para usuarios sigue pendiente. |
 
 Los dos paquetes oficiales para Windows son [`TRAZIP-1.0.0-Setup.exe`](https://github.com/kerwilgil/trazip-network/releases/download/v1.0.0/TRAZIP-1.0.0-Setup.exe) y [`TRAZIP-1.0.0-portable.zip`](https://github.com/kerwilgil/trazip-network/releases/download/v1.0.0/TRAZIP-1.0.0-portable.zip). Ambos incluyen `TRAZIP.exe`. No se publica un ejecutable independiente como tercer paquete.
